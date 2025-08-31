@@ -1,0 +1,21 @@
+From 8bd63cc75653e0bfe1aaa41d0b3081a19f3198a6 Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Tue, 26 Aug 2025 06:25:33 -0400
+Subject: [PATCH] docs: add link to install guide and releases
+
+---
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/README.md b/README.md
+index e5e5c39e..6d9ddad9 100644
+--- a/README.md
++++ b/README.md
+@@ -36,3 +36,7 @@ Panacea is a blockchain which is the key infrastructure for our services to rein
+ ## License
+ 
+ [Apache-2.0 License](LICENSE)
++
++## Install Guide
++- See detailed instructions: https://docs.gopanacea.org
++- For releases: https://github.com/medibloc/panacea-core/releases

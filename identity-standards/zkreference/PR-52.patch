@@ -1,0 +1,19 @@
+From 8fa13d6be047f39d01691b61558cc6cfc46a5f21 Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Wed, 27 Aug 2025 06:56:56 -0400
+Subject: [PATCH] docs: minor punctuation and link formatting
+
+---
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/README.md b/README.md
+index 8ec2fb3..a7caffb 100644
+--- a/README.md
++++ b/README.md
+@@ -46,3 +46,5 @@ The table below shows a list of current documents and content from the ZKProof e
+ | ZKProof Community Proposals | A set of documents that were submitted as proposals to be discussed and standardized | 2nd ZKProof Workshop | [LINK](https://github.com/zkpstandard/zkreference) |
+ | Workshop Notes | A set of topics in the community forum that include the notes of the breakout sessions from the 2nd ZKProof Workshop | 2nd ZKProof Workshop | [LINK](https://community.zkproof.org/c/zkproof-2019) |
+ | Public ZKProof Documentation | Aside from this repository and the [website](https://ZKProof.org), we have this folder with all the public documents from the effort | 1st & 2nd ZKProof Workshops | [LINK](https://drive.google.com/drive/u/2/folders/1HWZYMH-6Mx8wcX8geium506L0KRxcgPe) |
++
++Minor: fix punctuation and link formatting in README.

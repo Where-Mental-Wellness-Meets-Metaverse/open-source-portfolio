@@ -1,0 +1,138 @@
+From 1daac0ce83f42419756fc0b317ec03b28c184a90 Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Sun, 24 Aug 2025 12:48:15 -0400
+Subject: [PATCH 1/2] FHIR R4: normalize CodeableConcept codings and HL7
+ escapes; add tests
+
+---
+ .mvn/jvm.config | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 .mvn/jvm.config
+
+diff --git a/.mvn/jvm.config b/.mvn/jvm.config
+new file mode 100644
+index 000000000..380cf624a
+--- /dev/null
++++ b/.mvn/jvm.config
+@@ -0,0 +1,4 @@
++--add-opens=java.base/java.util=ALL-UNNAMED
++--add-opens=java.base/java.lang=ALL-UNNAMED
++--add-opens=java.base/java.lang.reflect=ALL-UNNAMED
++--add-opens=java.base/java.io=ALL-UNNAMED
+
+From 3aefd304ca7513b648cf150e0a5e84f04181d162 Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Mon, 25 Aug 2025 06:26:28 -0400
+Subject: [PATCH 2/2] Add FhirNormalizationUtils and unit test for
+ CodeableConcept + HL7 escape normalization
+
+---
+ .../api/util/FhirNormalizationUtils.java      | 55 +++++++++++++++++++
+ .../api/util/FhirNormalizationUtilsTest.java  | 36 ++++++++++++
+ 2 files changed, 91 insertions(+)
+ create mode 100644 api/src/main/java/org/openmrs/module/fhir2/api/util/FhirNormalizationUtils.java
+ create mode 100644 api/src/test/java/org/openmrs/module/fhir2/api/util/FhirNormalizationUtilsTest.java
+
+diff --git a/api/src/main/java/org/openmrs/module/fhir2/api/util/FhirNormalizationUtils.java b/api/src/main/java/org/openmrs/module/fhir2/api/util/FhirNormalizationUtils.java
+new file mode 100644
+index 000000000..3c30a23e1
+--- /dev/null
++++ b/api/src/main/java/org/openmrs/module/fhir2/api/util/FhirNormalizationUtils.java
+@@ -0,0 +1,55 @@
++/*
++ * This Source Code Form is subject to the terms of the Mozilla Public License,
++ * v. 2.0. If a copy of the MPL was not distributed with this file, You can
++ * obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
++ * the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
++ *
++ * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
++ * graphic logo is a trademark of OpenMRS Inc.
++ */
++/*
++ * Rights Reserved, Unlicensed
++ */
++package org.openmrs.module.fhir2.api.util;
++
++import org.hl7.fhir.r4.model.CodeableConcept;
++import org.hl7.fhir.r4.model.Coding;
++
++public class FhirNormalizationUtils {
++	
++	/**
++	 * Normalize a CodeableConcept by trimming code/system/display and decoding HL7 v2 escape sequences.
++	 */
++	public static void normalize(CodeableConcept concept) {
++		if (concept == null) {
++			return;
++		}
++		for (Coding coding : concept.getCoding()) {
++			if (coding.hasCode()) {
++				coding.setCode(clean(coding.getCode()));
++			}
++			if (coding.hasSystem()) {
++				coding.setSystem(clean(coding.getSystem()));
++			}
++			if (coding.hasDisplay()) {
++				coding.setDisplay(clean(coding.getDisplay()));
++			}
++		}
++	}
++	
++	private static String clean(String input) {
++		if (input == null) {
++			return null;
++		}
++		String trimmed = input.trim();
++		return decodeHl7Escapes(trimmed);
++	}
++	
++	/**
++	 * Simplified HL7 v2 escape decoding (handles \F\ | \S\ | \T\ | \R\ | \E\).
++	 */
++	private static String decodeHl7Escapes(String value) {
++		return value.replace("\\F\\", "|").replace("\\S\\", "^").replace("\\T\\", "&").replace("\\R\\", "~").replace("\\E\\",
++		    "\\");
++	}
++}
+diff --git a/api/src/test/java/org/openmrs/module/fhir2/api/util/FhirNormalizationUtilsTest.java b/api/src/test/java/org/openmrs/module/fhir2/api/util/FhirNormalizationUtilsTest.java
+new file mode 100644
+index 000000000..10ade054b
+--- /dev/null
++++ b/api/src/test/java/org/openmrs/module/fhir2/api/util/FhirNormalizationUtilsTest.java
+@@ -0,0 +1,36 @@
++/*
++ * This Source Code Form is subject to the terms of the Mozilla Public License,
++ * v. 2.0. If a copy of the MPL was not distributed with this file, You can
++ * obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
++ * the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
++ *
++ * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
++ * graphic logo is a trademark of OpenMRS Inc.
++ */
++/*
++ * Rights Reserved, Unlicensed
++ */
++package org.openmrs.module.fhir2.api.util;
++
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++import org.hl7.fhir.r4.model.CodeableConcept;
++import org.hl7.fhir.r4.model.Coding;
++import org.junit.jupiter.api.Test;
++
++public class FhirNormalizationUtilsTest {
++	
++	@Test
++	public void shouldTrimAndDecodeCodings() {
++		CodeableConcept concept = new CodeableConcept();
++		concept.addCoding(
++		    new Coding().setSystem("  http://loinc.org  ").setCode(" 1234-5 ").setDisplay("Blood Test \\F\\ Panel"));
++		
++		FhirNormalizationUtils.normalize(concept);
++		
++		Coding coding = concept.getCodingFirstRep();
++		assertEquals("http://loinc.org", coding.getSystem());
++		assertEquals("1234-5", coding.getCode());
++		assertEquals("Blood Test | Panel", coding.getDisplay());
++	}
++}

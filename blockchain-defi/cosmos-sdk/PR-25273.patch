@@ -1,0 +1,41 @@
+From 67adb1ba953ecec299aea4774f89545f08132299 Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Wed, 27 Aug 2025 07:07:27 -0400
+Subject: [PATCH 1/2] docs: add link to official developer docs
+
+---
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/README.md b/README.md
+index ff03c80c8d2b..8841d0a8a1e2 100644
+--- a/README.md
++++ b/README.md
+@@ -65,3 +65,6 @@ The IBC module for the Cosmos SDK has its own [cosmos/ibc-go repository](https:/
+ ## Disambiguation
+ 
+ This Cosmos SDK project is not related to the [React-Cosmos](https://github.com/react-cosmos/react-cosmos) project (yet). Many thanks to Evan Coury and Ovidiu (@skidding) for this Github organization name. As per our agreement, this disambiguation notice will stay here.
++
++## Documentation
++- Developer docs: https://docs.cosmos.network/
+
+From eeacc0235cdbbc6aa412871b3f7a77e499c702fc Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Wed, 27 Aug 2025 17:58:12 -0400
+Subject: [PATCH 2/2] docs(README): convert bare docs URL to Markdown link;
+ remove duplicate Documentation subsection
+
+---
+ README.md | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/README.md b/README.md
+index 8841d0a8a1e2..53d2fe6c65f9 100644
+--- a/README.md
++++ b/README.md
+@@ -66,5 +66,3 @@ The IBC module for the Cosmos SDK has its own [cosmos/ibc-go repository](https:/
+ 
+ This Cosmos SDK project is not related to the [React-Cosmos](https://github.com/react-cosmos/react-cosmos) project (yet). Many thanks to Evan Coury and Ovidiu (@skidding) for this Github organization name. As per our agreement, this disambiguation notice will stay here.
+ 
+-## Documentation
+-- Developer docs: https://docs.cosmos.network/

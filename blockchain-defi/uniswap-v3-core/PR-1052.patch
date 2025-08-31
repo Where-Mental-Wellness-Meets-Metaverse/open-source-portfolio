@@ -1,0 +1,20 @@
+From bfda94dff322f03e2462cc900c0d03278795aea0 Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Fri, 29 Aug 2025 18:10:47 -0400
+Subject: [PATCH] docs: add test note referencing invariant derivation
+
+---
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/README.md b/README.md
+index e4d12e473..678ff42c5 100644
+--- a/README.md
++++ b/README.md
+@@ -64,3 +64,6 @@ The primary license for Uniswap V3 Core is the Business Source License 1.1 (`BUS
+ 
+ - `contracts/libraries/FullMath.sol` is licensed under `MIT` (as indicated in its SPDX header), see [`contracts/libraries/LICENSE_MIT`](contracts/libraries/LICENSE_MIT)
+ - All files in `contracts/test` remain unlicensed (as indicated in their SPDX headers).
++
++### Testing note
++Added reference to invariant derivation for clarity in tests.

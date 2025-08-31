@@ -1,0 +1,19 @@
+From f13b3c061896f461733ac8517ec9abcff205726a Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Wed, 27 Aug 2025 06:55:13 -0400
+Subject: [PATCH] docs: add cross-link to ReentrancyGuard guide
+
+---
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/README.md b/README.md
+index 2f92281b3bf..d13c2013e48 100644
+--- a/README.md
++++ b/README.md
+@@ -106,3 +106,5 @@ OpenZeppelin Contracts is released under the [MIT License](LICENSE).
+ ## Legal
+ 
+ Your use of this Project is governed by the terms found at www.openzeppelin.com/tos (the "Terms").
++
++> See also: ReentrancyGuard usage guide in the docs.

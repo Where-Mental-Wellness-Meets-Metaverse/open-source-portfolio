@@ -1,0 +1,21 @@
+From f4107c9be2ce10e5e22de3fd6120091033559ad5 Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Fri, 29 Aug 2025 16:02:27 -0400
+Subject: [PATCH] docs: add missing blank line before list in README
+
+---
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/README.md b/README.md
+index 7463a87d011277..29dab493ec18e6 100644
+--- a/README.md
++++ b/README.md
+@@ -6,6 +6,7 @@ The goal of the EIP project is to standardize and provide high-quality documenta
+ 
+ The [status page](https://eips.ethereum.org/) tracks and lists EIPs, which can be divided into the following categories:
+ 
++
+ - [Core EIPs](https://eips.ethereum.org/core) are improvements to the Ethereum consensus protocol.
+ - [Networking EIPs](https://eips.ethereum.org/networking) specify the peer-to-peer networking layer of Ethereum.
+ - [Interface EIPs](https://eips.ethereum.org/interface) standardize interfaces to Ethereum, which determine how users and applications interact with the blockchain.

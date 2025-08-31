@@ -1,0 +1,20 @@
+From ea98b9da50b88dd54a651017eba0b5e4f9f19635 Mon Sep 17 00:00:00 2001
+From: megmontanez2000 <megmontanez2000@yahoo.com>
+Date: Tue, 26 Aug 2025 06:23:14 -0400
+Subject: [PATCH] docs: clarify JDK 11/17 LTS requirement
+
+---
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/README.md b/README.md
+index e71f204fdc..df5bc0b55e 100644
+--- a/README.md
++++ b/README.md
+@@ -124,3 +124,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
++## Build Requirements
++Synthea requires Java 11 LTS or Java 17 LTS. Ensure one of these is installed before building.
