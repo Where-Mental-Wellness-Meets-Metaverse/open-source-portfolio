@@ -8,7 +8,7 @@ Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Signed-off-by: megmontanez2000 <megmontanez2000@yahoo.com>
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  docs/healthcare-vc-examples/README.md         |  14 +
  .../privacy_healthcare_credentials.md         |  20 +
@@ -5015,7 +5015,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  .../privacy_healthcare_credentials.md.save                 | 7 -------
  docs/healthcare-vc-examples/tests/package.json             | 1 -
@@ -5066,7 +5066,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  .../PractitionerAttestationCredential.json    | 54 +++++++++++++++++++
  1 file changed, 54 insertions(+)
@@ -5141,7 +5141,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  .../tests/sample_PractitionerAttestationCredential               | 1 -
  1 file changed, 1 deletion(-)
@@ -5157,14 +5157,14 @@ index 9a83a042c..000000000
 
 From 7a98ee9c5190c5c88ec275184a170b8278506a7a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Dr=2E=20Meg=20Monta=C3=B1ez-Davenport?=
- <dr.meg.data.scientist@gmail.com>
+ <future.systems.lab@proton.me>
 Date: Sun, 17 Aug 2025 17:01:34 -0400
 Subject: [PATCH 05/11] chore: remove node_modules and add .gitignore
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  .gitignore | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
@@ -5184,14 +5184,14 @@ index 6b274b525..9b97d1681 100644
 
 From f55c9a7ce6ce18d943fa7d2efbd601934dc066c6 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Dr=2E=20Meg=20Monta=C3=B1ez-Davenport?=
- <dr.meg.data.scientist@gmail.com>
+ <future.systems.lab@proton.me>
 Date: Sun, 17 Aug 2025 17:04:35 -0400
 Subject: [PATCH 06/11] docs: update healthcare VC examples and README
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  README.md                                                 | 8 ++++++++
  docs/healthcare-vc-examples/README.md                     | 3 ---
@@ -5241,14 +5241,14 @@ index c21533341..4cc340cd6 100644
 
 From 8d3e37d1affa93115a309bc8f998d12b1b3a95d7 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Dr=2E=20Meg=20Monta=C3=B1ez-Davenport?=
- <dr.meg.data.scientist@gmail.com>
+ <future.systems.lab@proton.me>
 Date: Sun, 17 Aug 2025 17:09:18 -0400
 Subject: [PATCH 07/11] chore: purge test node_modules and update .gitignore
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  .gitignore                                    |   1 +
  .../tests/node_modules/.package-lock.json     |  61 --
@@ -9977,14 +9977,14 @@ index 88b3236f8..000000000
 
 From e19a2baf8ba4c9dae0c091f6c2740263934ab088 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Dr=2E=20Meg=20Monta=C3=B1ez-Davenport?=
- <dr.meg.data.scientist@gmail.com>
+ <future.systems.lab@proton.me>
 Date: Sun, 17 Aug 2025 17:15:59 -0400
 Subject: [PATCH 08/11] chore: ensure node_modules ignored
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  .gitignore | 2 ++
  1 file changed, 2 insertions(+)
@@ -10002,7 +10002,7 @@ index 6373ef957..681380d31 100644
 
 From e453e49a4cd01a773ed5306bc41ee685cb83d064 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Dr=2E=20Meg=20Monta=C3=B1ez-Davenport?=
- <dr.meg.data.scientist@gmail.com>
+ <future.systems.lab@proton.me>
 Date: Sun, 17 Aug 2025 17:21:51 -0400
 Subject: [PATCH 09/11] docs: clarify repo fit and intended usage for
  healthcare VC examples
@@ -10010,7 +10010,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  docs/healthcare-vc-examples/README.md | 3 +++
  1 file changed, 3 insertions(+)
@@ -10029,7 +10029,7 @@ index 3e26b2f30..4bccef5ae 100644
 
 From e78ced4623918b3bd5bec39c07be9207ad88f8a5 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Dr=2E=20Meg=20Monta=C3=B1ez-Davenport?=
- <dr.meg.data.scientist@gmail.com>
+ <future.systems.lab@proton.me>
 Date: Thu, 21 Aug 2025 21:40:30 -0400
 Subject: [PATCH 10/11] Fix .gitignore: remove redundant node_modules; keep
  client/ and **/node_modules/
@@ -10037,7 +10037,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  .gitignore | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
@@ -10059,7 +10059,7 @@ index 681380d31..0f31ac292 100644
 
 From 043ccf066e0737c5e804472cd6f5780692c7ee78 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Dr=2E=20Meg=20Monta=C3=B1ez-Davenport?=
- <dr.meg.data.scientist@gmail.com>
+ <future.systems.lab@proton.me>
 Date: Sat, 23 Aug 2025 08:16:15 -0400
 Subject: [PATCH 11/11] bash Copy Edit 'Move Testing block to
  docs/healthcare-vc-examples/README.md per review
@@ -10067,7 +10067,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Signed-off-by: Dr. Meg Montañez-Davenport <dr.meg.data.scientist@gmail.com>
+Signed-off-by: Dr. Meg Montañez-Davenport <future.systems.lab@proton.me>
 ---
  README.md                             | 6 ------
  docs/healthcare-vc-examples/README.md | 7 +++++++
